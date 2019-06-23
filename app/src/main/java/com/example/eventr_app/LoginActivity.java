@@ -137,8 +137,8 @@ public class LoginActivity extends AppCompatActivity {
                     {
                         if (usersData.getPassword().equals(password))
                         {
-                            Toast.makeText(LoginActivity.this, "Zalogowano pomyślnie...", Toast.LENGTH_SHORT).show();
-                            loadingBar.dismiss();
+                            /*Toast.makeText(LoginActivity.this, "Zalogowano pomyślnie...", Toast.LENGTH_SHORT).show();
+                            loadingBar.dismiss();*/
 
                             Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                             startActivity(intent);
@@ -150,16 +150,16 @@ public class LoginActivity extends AppCompatActivity {
 
                                 Intent intent = new Intent(LoginActivity.this, AdminCategoryActivity.class);
                                 startActivity(intent);
-                            }
-                            else if (parentDbName.equals("Users"))
+                            }*/
+                            if (parentDbName.equals("Users"))
                             {
-                                Toast.makeText(LoginActivity.this, "logged in Successfully...", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(LoginActivity.this, "Zalogowano pomyślnie...", Toast.LENGTH_SHORT).show();
                                 loadingBar.dismiss();
 
-                                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                                Intent intent1 = new Intent(LoginActivity.this, HomeActivity.class);
                                 Prevalent.currentOnlineUser = usersData;
-                                startActivity(intent);
-                            }*/
+                                startActivity(intent1);
+                            }
                         }
                         else
                         {

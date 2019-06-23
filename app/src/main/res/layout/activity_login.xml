@@ -4,22 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login"
+    android:background="@drawable/back"
     tools:context=".LoginActivity">
 
-    <ImageView
-        android:id="@+id/login_applogo"
-        android:layout_width="300dp"
-        android:layout_height="100dp"
-        android:src="@drawable/applogo"
+    <TextView
+        android:id="@+id/eventR"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="200dp"/>
+        android:textSize="35sp"
+        android:text="EventR"
+        android:textAlignment="center"
+        android:textColor="@color/colorLogo"
+        android:textStyle="bold"
+        />
+
+    <ImageView
+        android:id="@+id/login_app_logo"
+        android:layout_width="331dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="145dp"
+        android:src="@drawable/logo" />
 
     <EditText
         android:id="@+id/login_phone_number_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/login_applogo"
+        android:layout_below="@id/login_app_logo"
         android:background="@drawable/input_design"
         android:padding="20dp"
         android:layout_marginLeft="15dp"
@@ -93,18 +106,18 @@
         android:layout_marginRight="15dp"
         android:padding="17dp"
         android:background="@drawable/buttons"
-        android:text="Zaloguj się"
+        android:text="Zaloguj"
         android:textColor="@android:color/white"/>
 
     <TextView
         android:id="@+id/admin_panel_link"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Jestem Adminem?"
+        android:text="Jestem administratorem"
         android:layout_below="@id/login_btn"
         android:layout_alignParentEnd="true"
         android:textColor="@android:color/white"
-        android:textSize="17sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         android:layout_marginLeft="80dp"
         android:layout_marginEnd="23dp"/>
@@ -113,11 +126,11 @@
         android:id="@+id/not_admin_panel_link"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nie jestem Adminem?"
+        android:text="Nie jestem administratorem"
         android:layout_below="@id/login_btn"
         android:layout_alignParentStart="true"
         android:textColor="@android:color/white"
-        android:textSize="17sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         android:layout_marginLeft="80dp"
         android:layout_marginEnd="23dp"

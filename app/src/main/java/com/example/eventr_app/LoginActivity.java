@@ -137,29 +137,25 @@ public class LoginActivity extends AppCompatActivity {
                     {
                         if (usersData.getPassword().equals(password))
                         {
-                            /*Toast.makeText(LoginActivity.this, "Zalogowano pomyślnie...", Toast.LENGTH_SHORT).show();
-                            loadingBar.dismiss();*/
 
-                            Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-                            startActivity(intent);
-
-                            /*if (parentDbName.equals("Admins"))
+                            if (parentDbName.equals("Admins"))
                             {
-                                Toast.makeText(LoginActivity.this, "Welcome Admin, you are logged in Successfully...", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(LoginActivity.this, "Witaj  Admin, zalogowałeś się poprawnie", Toast.LENGTH_SHORT).show();
                                 loadingBar.dismiss();
 
                                 Intent intent = new Intent(LoginActivity.this, AdminCategoryActivity.class);
                                 startActivity(intent);
-                            }*/
-                            if (parentDbName.equals("Users"))
+                            }
+                            else if (parentDbName.equals("Users"))
                             {
-                                Toast.makeText(LoginActivity.this, "Zalogowano pomyślnie...", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(LoginActivity.this, "Zalogowano poprawnie", Toast.LENGTH_SHORT).show();
                                 loadingBar.dismiss();
 
-                                Intent intent1 = new Intent(LoginActivity.this, HomeActivity.class);
+                                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                                 Prevalent.currentOnlineUser = usersData;
-                                startActivity(intent1);
+                                startActivity(intent);
                             }
+
                         }
                         else
                         {

@@ -22,6 +22,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.rey.material.widget.CheckBox;
 
+import io.paperdb.Paper;
+
 public class LoginActivity extends AppCompatActivity {
 
     private EditText InputPhoneNumber, InputPassword;
@@ -48,8 +50,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
         chkBoxRememberMe = findViewById(R.id.remember_me_chk);
-        //Paper.init(this);
-
+        Paper.init(this);
 
         LoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -113,11 +114,11 @@ public class LoginActivity extends AppCompatActivity {
 
     private void AllowAccessToAccount(final String phone, final String password)
     {
-        /*if(chkBoxRememberMe.isChecked())
+        if(chkBoxRememberMe.isChecked())
         {
             Paper.book().write(Prevalent.UserPhoneKey, phone);
             Paper.book().write(Prevalent.UserPasswordKey, password);
-        }*/
+        }
 
 
         final DatabaseReference RootRef;

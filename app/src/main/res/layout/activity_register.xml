@@ -25,7 +25,7 @@
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:layout_marginTop="6dp"
-        android:hint="Username"
+        android:hint="Nazwa użytkownika"
         android:inputType="text"
         android:textColor="@android:color/white"
         android:textColorHint="@android:color/white"
@@ -42,7 +42,7 @@
         android:layout_marginLeft="15dp"
         android:layout_marginTop="6dp"
         android:layout_marginRight="15dp"
-        android:hint="Phone Number"
+        android:hint="Numer telefonu"
         android:inputType="number"
         android:textColor="@android:color/white"
         android:textColorHint="@android:color/white"
@@ -59,7 +59,7 @@
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:layout_marginTop="6dp"
-        android:hint="Password"
+        android:hint="Hasło"
         android:inputType="textPassword"
         android:textColor="@android:color/white"
         android:textColorHint="@android:color/white"
@@ -76,7 +76,7 @@
         android:layout_marginRight="15dp"
         android:padding="17dp"
         android:background="@drawable/buttons"
-        android:text="Create Account"
+        android:text="Stwórz konto"
         android:textColor="@android:color/white"/>
 
 

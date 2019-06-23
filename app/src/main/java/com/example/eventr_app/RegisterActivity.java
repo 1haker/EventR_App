@@ -53,17 +53,17 @@ public class RegisterActivity extends AppCompatActivity {
         String password = inputPassword.getText().toString();
 
         if(TextUtils.isEmpty(name)){
-            Toast.makeText(this, "Please write your name...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Proszę wpisz swoją nazwe użytkownika...", Toast.LENGTH_SHORT).show();
         }
         else if(TextUtils.isEmpty(phone)){
-            Toast.makeText(this, "Please write your phone number...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Proszę wpisz swój numer telefonu....", Toast.LENGTH_SHORT).show();
         }
         else if(TextUtils.isEmpty(password)){
-            Toast.makeText(this, "Please write your password...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Proszę wpisz swoje hasło...", Toast.LENGTH_SHORT).show();
         }
         else{
             loadingBar.setTitle("Create Account");
-            loadingBar.setMessage("Please wait, while we are checking your credentials");
+            loadingBar.setMessage("Proszę czekać, sprawdzamy twoje dane.");
             loadingBar.setCanceledOnTouchOutside(false);
             loadingBar.show();
 
@@ -94,7 +94,7 @@ public class RegisterActivity extends AppCompatActivity {
                                 {
                                     if (task.isSuccessful())
                                     {
-                                        Toast.makeText(RegisterActivity.this, "Congratulations, your account has been created.", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(RegisterActivity.this, "Gratulacje, twoje konto zostało stworzone.", Toast.LENGTH_SHORT).show();
                                         loadingBar.dismiss();
 
                                         Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
@@ -103,16 +103,16 @@ public class RegisterActivity extends AppCompatActivity {
                                     else
                                     {
                                         loadingBar.dismiss();
-                                        Toast.makeText(RegisterActivity.this, "Network Error: Please try again after some time...", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(RegisterActivity.this, "Problem sieci, sporóbuj za chwilę...", Toast.LENGTH_SHORT).show();
                                     }
                                 }
                             });
                 }
                 else
                 {
-                    Toast.makeText(RegisterActivity.this, "This " + phone + " already exists.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterActivity.this, "Konto z numerem" + phone + " już istnieje.", Toast.LENGTH_SHORT).show();
                     loadingBar.dismiss();
-                    Toast.makeText(RegisterActivity.this, "Please try again using another phone number.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterActivity.this, "Proszę spróbuj ponownie z innym numerem telefonu.", Toast.LENGTH_SHORT).show();
 
                     Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
                     startActivity(intent);

@@ -92,16 +92,16 @@ public class LoginActivity extends AppCompatActivity {
 
         if (TextUtils.isEmpty(phone))
         {
-            Toast.makeText(this, "Please write your phone number...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Proszę wpisz swój numer telefonu...", Toast.LENGTH_SHORT).show();
         }
         else if (TextUtils.isEmpty(password))
         {
-            Toast.makeText(this, "Please write your password...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Proszę wpisz swoje hasło...", Toast.LENGTH_SHORT).show();
         }
         else
         {
             loadingBar.setTitle("Login Account");
-            loadingBar.setMessage("Please wait, while we are checking the credentials.");
+            loadingBar.setMessage("Proszę czekać, sprawdzamy twoje dane.");
             loadingBar.setCanceledOnTouchOutside(false);
             loadingBar.show();
 
@@ -137,7 +137,7 @@ public class LoginActivity extends AppCompatActivity {
                     {
                         if (usersData.getPassword().equals(password))
                         {
-                            Toast.makeText(LoginActivity.this, "Llogged in Successfully...", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginActivity.this, "Zalogowano pomyślnie...", Toast.LENGTH_SHORT).show();
                             loadingBar.dismiss();
 
                             Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
@@ -164,13 +164,13 @@ public class LoginActivity extends AppCompatActivity {
                         else
                         {
                             loadingBar.dismiss();
-                            Toast.makeText(LoginActivity.this, "Password is incorrect.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginActivity.this, "Hasło nie jest poprawne.", Toast.LENGTH_SHORT).show();
                         }
                     }
                 }
                 else
                 {
-                    Toast.makeText(LoginActivity.this, "Account with this " + phone + " number do not exists.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Konto z numerem " + phone + " nie istnieje.", Toast.LENGTH_SHORT).show();
                     loadingBar.dismiss();
                 }
             }

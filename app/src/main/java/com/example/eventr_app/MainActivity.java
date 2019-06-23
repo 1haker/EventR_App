@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
                     {
                         if (usersData.getPassword().equals(password))
                         {
-                            Toast.makeText(MainActivity.this, "Please wait, you are already logged in...", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this, "Proszę czekać, jesteś juz zalogowany...", Toast.LENGTH_SHORT).show();
                             loadingBar.dismiss();
 
                             Intent intent = new Intent(MainActivity.this, HomeActivity.class);
@@ -100,13 +100,13 @@ public class MainActivity extends AppCompatActivity {
                         else
                         {
                             loadingBar.dismiss();
-                            Toast.makeText(MainActivity.this, "Password is incorrect.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this, "Hasło nie jest poprawne.", Toast.LENGTH_SHORT).show();
                         }
                     }
                 }
                 else
                 {
-                    Toast.makeText(MainActivity.this, "Account with this " + phone + " number do not exists.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Konto z numerem " + phone + " nie istnieje.", Toast.LENGTH_SHORT).show();
                     loadingBar.dismiss();
                 }
             }

@@ -10,4 +10,4 @@ displaying its details) and information about the characters (with a detailed de
 The application will use GPS to determine the region in which the player is currently located. In addition, 
 you'll be able to publish posts to help find players to play together.
 
-![alt text](https://imgur.com/a/mRFPbtf)
+For view preview of this APP checkout it: https://imgur.com/a/mRFPbtf
